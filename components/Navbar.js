@@ -125,6 +125,10 @@ const Navbar = () => {
                       ? navbarStyles.active
                       : ""
                   }
+                  style={{
+                    color:
+                      router.pathname == `/${page.value}` ? "#6bb4fc" : "white",
+                  }}
                 >
                   {page.name}
                 </Button>
