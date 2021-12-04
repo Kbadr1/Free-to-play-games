@@ -1,0 +1,33 @@
+.card {
+  height: 100%;
+  background-color: #071A2F;
+}
+.card  h4 {
+  color: rgb(51, 153, 255);
+  font-weight: 700;
+}
+.card p {
+  color: rgb(170, 180, 190);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card h6 {
+  display: inline;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 0.675rem;
+}
+
+.card .genre {
+  color: #071A2F;
+  background-color: rgb(51, 153, 255);
+  
+}
+
+.card .platform {
+  float: right;
+  color: rgb(51, 153, 255);
+  font-weight: 200;
+}

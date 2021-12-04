@@ -1,0 +1,37 @@
+.game{
+  color: rgb(170, 180, 190);
+}
+
+.game .thumbnail_img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.game .short_description {
+  background-color: #071A2F;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.game h4 {
+  color: rgb(51, 153, 255);
+  font-weight: 700;
+}
+
+.game h5 {
+  font-weight: 700;
+  color: rgb(165, 216, 255);
+}
+.game hr {
+  border-color: rgb(170, 180, 190);
+}
+
+.game .info_title {
+  color: rgb(165, 216, 255);
+}
+
+.game .screenshot_img {
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
