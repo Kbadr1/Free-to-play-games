@@ -3,7 +3,7 @@ import { Box, Container, Grid, Typography, Modal } from "@mui/material";
 import ShowMoreText from "react-show-more-text";
 import gameStyles from "../../../styles/Game.module.css";
 
-const game = ({ game }) => {
+const Game = ({ game }) => {
   const executeOnClick = (isExpanded) => {
     console.log(isExpanded);
   };
@@ -291,4 +291,4 @@ export const getStaticPaths = async () => {
   };
 };
 
-export default game;
+export default Game;
