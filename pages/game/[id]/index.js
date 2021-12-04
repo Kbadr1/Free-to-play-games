@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import { Box, Container, Grid, Typography, Modal } from "@mui/material";
 import ShowMoreText from "react-show-more-text";
 import gameStyles from "../../../styles/Game.module.css";
@@ -67,22 +66,19 @@ const game = ({ game }) => {
               <Typography variant="h4" marginBottom={2}>
                 {game.title}
               </Typography>
-              <Typography vairant="subtitle2">
-                <ShowMoreText
-                  /* Default options */
-                  lines={4}
-                  more="+ Read more"
-                  less="- Read less"
-                  className="content-css"
-                  anchorClass="read-more-less"
-                  onClick={executeOnClick}
-                  expanded={false}
-                  // width={280}
-                  truncatedEndingComponent={"... "}
-                >
-                  {game.description}
-                </ShowMoreText>
-              </Typography>
+
+              <ShowMoreText
+                lines={4}
+                more="+ Read more"
+                less="- Read less"
+                className="content-css"
+                anchorClass="read-more-less"
+                onClick={executeOnClick}
+                expanded={false}
+                truncatedEndingComponent={"... "}
+              >
+                <Typography vairant="subtitle2">{game.description}</Typography>
+              </ShowMoreText>
             </Box>
             {/* additional information */}
             <Box component="div" marginBottom={4}>
@@ -149,30 +145,18 @@ const game = ({ game }) => {
             </Box>
             {/* screenshots */}
             <Box component="div" marginBottom={4}>
-              {/* <Typography variant="h5">Screenshots</Typography>
+              <Typography variant="h5">Screenshots</Typography>
               <hr />
               <Grid container spacing={2}>
                 {game.screenshots.slice(0, 4).map((img) => (
-                  <Grid item xs={6} sm={3}>
+                  // <>
+                  <Grid item xs={6} sm={3} key={img.id}>
                     <img
                       src={img.image}
                       alt="screenshot"
                       className={gameStyles.screenshot_img}
+                      onClick={() => handleOpen(img.id)}
                     />
-                  </Grid>
-                ))}
-              </Grid> */}
-              <Grid container spacing={2}>
-                {game.screenshots.slice(0, 4).map((img) => (
-                  <>
-                    <Grid item xs={6} sm={3}>
-                      <img
-                        src={img.image}
-                        alt="screenshot"
-                        className={gameStyles.screenshot_img}
-                        onClick={() => handleOpen(img.id)}
-                      />
-                    </Grid>
                     {img.id === activeImg && (
                       <Modal
                         open={open}
@@ -189,7 +173,9 @@ const game = ({ game }) => {
                         </Box>
                       </Modal>
                     )}
-                  </>
+                  </Grid>
+
+                  // </>
                 ))}
               </Grid>
             </Box>

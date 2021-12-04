@@ -42,8 +42,6 @@ const Navbar = () => {
     setAnchorElNav(null);
   };
 
-  console.log(router.pathname);
-
   return (
     <AppBar position="static" className={navbarStyles.navbar}>
       <Container maxWidth="lg">

@@ -8,11 +8,11 @@ const GameList = ({ games }) => {
       <Container maxWidth="lg">
         <Grid container spacing={3}>
           {games.map((game) => (
-            <>
-              <Grid item xs={12} sm={6} md={4}>
-                <GameItem game={game} />
-              </Grid>
-            </>
+            // <>
+            <Grid item xs={12} sm={6} md={4} key={game.id}>
+              <GameItem game={game} />
+            </Grid>
+            // </>
           ))}
         </Grid>
       </Container>

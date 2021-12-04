@@ -1,8 +1,6 @@
-import styles from "../styles/Home.module.css";
 import Head from "next/head";
 import GameList from "../components/GameList";
-import { Box, Container, Stack, Pagination } from "@mui/material";
-import { useState } from "react";
+import { Box } from "@mui/material";
 import Header from "../components/Header";
 
 export default function Home({ games }) {
