@@ -13,7 +13,10 @@ import Link from "next/link";
 const GameItem = ({ game }) => {
   return (
     <Link href="/game/[id]" as={`/game/${game.id}`}>
-      <Card className={GameItemStyles.card}>
+      <Card
+        className={GameItemStyles.card}
+        style={{ backgroundColor: "#071A2F" }}
+      >
         <CardActionArea>
           <CardMedia
             component="img"
